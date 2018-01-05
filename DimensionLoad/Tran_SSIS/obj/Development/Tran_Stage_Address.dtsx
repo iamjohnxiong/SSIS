@@ -1,0 +1,606 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/2/2018 2:45:13 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="A-212229"
+  DTS:CreatorName="MFBNTDOM\jxiong"
+  DTS:DTSID="{3DA30FA6-6502-4632-B1A5-F63EECCB2848}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.0800.60"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Tran_Stage_Address"
+  DTS:PackageType="5"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{AE30297D-E0E3-425E-A2EA-D709E5BCC3B9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT - Stage Address File"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{06B0EE27-DFE1-47C0-BA7D-F8EA161354E8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT - Stage Address File"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - Stage Address File\FF SRC - Address Flat File"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="FF SRC - Address Flat File"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Connections[FlatFileConnection]"
+                  connectionManagerID="{55D56CCE-8129-4D26-8611-052E30E136E8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AddressFlatFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[GUID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].ExternalColumns[GUID]"
+                      length="50"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[GUID]"
+                      name="GUID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[ADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].ExternalColumns[ADDRESS]"
+                      length="50"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[ADDRESS]"
+                      name="ADDRESS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[CITY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].ExternalColumns[CITY]"
+                      length="50"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[CITY]"
+                      name="CITY"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[STATE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].ExternalColumns[STATE]"
+                      length="50"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[STATE]"
+                      name="STATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[ZIP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].ExternalColumns[ZIP]"
+                      length="50"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[ZIP]"
+                      name="ZIP"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].ExternalColumns[COUNTRY]"
+                      length="50"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[COUNTRY]"
+                      name="COUNTRY"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].ExternalColumns[GUID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="GUID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].ExternalColumns[ADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ADDRESS" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].ExternalColumns[CITY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CITY" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].ExternalColumns[STATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="STATE" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].ExternalColumns[ZIP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ZIP" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].ExternalColumns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="COUNTRY" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLEDB DEST - stgTblAddress"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stgTblAddress]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Connections[OleDbConnection]"
+                  connectionManagerID="{826EE4C0-8D36-4168-B79C-3217840EBA09}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TranOleDb]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].Columns[GUID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="GUID"
+                      externalMetadataColumnId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrCstGuid]"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[GUID]" />
+                    <inputColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].Columns[ADDRESS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ADDRESS"
+                      externalMetadataColumnId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrAddress1]"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[ADDRESS]" />
+                    <inputColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].Columns[CITY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CITY"
+                      externalMetadataColumnId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrCity]"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[CITY]" />
+                    <inputColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].Columns[STATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STATE"
+                      externalMetadataColumnId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrState]"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[STATE]" />
+                    <inputColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].Columns[ZIP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ZIP"
+                      externalMetadataColumnId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrZip]"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[ZIP]" />
+                    <inputColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].Columns[COUNTRY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="COUNTRY"
+                      externalMetadataColumnId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrCountry]"
+                      lineageId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output].Columns[COUNTRY]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrId]"
+                      dataType="i4"
+                      name="stgAdrId" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrCstGuid]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="stgAdrCstGuid" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrAddress1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="stgAdrAddress1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrAddress2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="stgAdrAddress2" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrCity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="stgAdrCity" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrState]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="stgAdrState" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrZip]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="stgAdrZip" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrZip4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="stgAdrZip4" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input].ExternalColumns[stgAdrCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="stgAdrCountry" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - Stage Address File.Paths[Flat File Source Output]"
+              endId="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\DFT - Stage Address File\FF SRC - Address Flat File.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - spTruncateStgTblCustomer"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9D438F0F-C687-4B30-878C-AEDDF9975260}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - spTruncateStgTblCustomer"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{826EE4C0-8D36-4168-B79C-3217840EBA09}"
+          SQLTask:SqlStatementSource="EXEC [dbo].[spTruncateStgTblAddress]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{0D52FA0A-70EE-4BF6-8E64-BBC591687500}"
+      DTS:From="Package\SQL - spTruncateStgTblCustomer"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT - Stage Address File" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="245,42"
+          Id="Package\SQL - spTruncateStgTblCustomer"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\DFT - Stage Address File"
+          TopLeft="26.5,107.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="128,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT - Stage Address File">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="211,42"
+          Id="Package\DFT - Stage Address File\FF SRC - Address Flat File"
+          TopLeft="450,127" />
+        <NodeLayout
+          Size="228,42"
+          Id="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress"
+          TopLeft="438,233" />
+        <EdgeLayout
+          Id="Package\DFT - Stage Address File.Paths[Flat File Source Output]"
+          TopLeft="553.75,169">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64"
+              Start="0,0"
+              End="0,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - Stage Address File\OLEDB DEST - stgTblAddress">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

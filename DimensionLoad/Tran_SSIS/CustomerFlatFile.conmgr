@@ -21,7 +21,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="id"
-          DTS:DTSID="{864C19C5-8B9B-42EA-9116-D3B031EEA357}"
+          DTS:DTSID="{77B46E11-9B2B-43B0-AE9C-71189B3E1D73}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -30,7 +30,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="first_name"
-          DTS:DTSID="{27E0D2B6-6A01-4B10-8E0D-A0D6B60FB66A}"
+          DTS:DTSID="{CD20FF3D-4859-49B3-9781-7E426E830AB4}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="last_name"
-          DTS:DTSID="{8D85AEA9-0D55-4EB8-B1ED-02550DC1256C}"
+          DTS:DTSID="{597E64FE-2AA6-419F-9B37-033EA593AB61}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="email"
-          DTS:DTSID="{8B42F374-900C-4ABC-A09F-DAEF89019060}"
+          DTS:DTSID="{9694E28C-5485-482A-9A7D-047BF489EAA2}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="gender"
-          DTS:DTSID="{1F1C8C5A-02AB-40EF-8700-259964882E40}"
+          DTS:DTSID="{E94189CD-E9CC-4E27-9257-6BBC3EE4580C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="SSN"
-          DTS:DTSID="{77DAF2E8-2FBC-46FC-ACAF-C187691D615B}"
+          DTS:DTSID="{59925AC0-1621-4DE4-AFD0-D7F3F816DB16}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="GUID"
-          DTS:DTSID="{4BBBDBD0-C05E-42AB-B7D3-3509285DFB6C}"
+          DTS:DTSID="{8D7B223D-1B6C-4F7E-A617-81F7E1F92ADA}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

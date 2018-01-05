@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>EDW_SSIS</Name>
-    <LastWriteTime>2017-12-20T14:10:48.6181542Z</LastWriteTime>
+    <LastWriteTime>2017-12-22T13:08:44.8826189Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>Package.dtsx</Name>
-      <LastWriteTime>2017-12-20T13:47:54.8571939Z</LastWriteTime>
+      <Name>EDW_Load_DimCustomer.dtsx</Name>
+      <LastWriteTime>2017-12-22T13:23:45.7618014Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

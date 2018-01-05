@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Tran_Stage_Customer"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{7865297B-EE4B-4DE1-B4CA-77A2AA967018}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{BBC10592-3655-49CF-9960-5EDB31BB1278}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -293,11 +293,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer"
+              refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLEDB DEST - stgCustomer"
+              name="OLEDB DEST - stgTblCustomer"
               usesDispositions="true"
               version="4">
               <properties>
@@ -308,7 +308,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[stgCustomer]</property>
+                  name="OpenRowset">[dbo].[stgTblCustomer]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -350,7 +350,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Connections[OleDbConnection]"
+                  refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Connections[OleDbConnection]"
                   connectionManagerID="{826EE4C0-8D36-4168-B79C-3217840EBA09}:external"
                   connectionManagerRefId="Project.ConnectionManagers[TranOleDb]"
                   description="The OLE DB runtime connection used to access the database."
@@ -358,100 +358,101 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input]"
+                  refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].Columns[first_name]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].Columns[first_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="first_name"
-                      externalMetadataColumnId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstFirstName]"
+                      externalMetadataColumnId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstFirstName]"
                       lineageId="Package\DFT - Stage Customer File\FF SRC - Customer Flat File.Outputs[Flat File Source Output].Columns[first_name]" />
                     <inputColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].Columns[last_name]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].Columns[last_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="last_name"
-                      externalMetadataColumnId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstLastName]"
+                      externalMetadataColumnId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstLastName]"
                       lineageId="Package\DFT - Stage Customer File\FF SRC - Customer Flat File.Outputs[Flat File Source Output].Columns[last_name]" />
                     <inputColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].Columns[email]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].Columns[email]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="email"
-                      externalMetadataColumnId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstEmail]"
+                      externalMetadataColumnId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstEmail]"
                       lineageId="Package\DFT - Stage Customer File\FF SRC - Customer Flat File.Outputs[Flat File Source Output].Columns[email]" />
                     <inputColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].Columns[gender]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].Columns[gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="gender"
-                      externalMetadataColumnId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstGender]"
+                      externalMetadataColumnId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstGender]"
                       lineageId="Package\DFT - Stage Customer File\FF SRC - Customer Flat File.Outputs[Flat File Source Output].Columns[gender]" />
                     <inputColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].Columns[SSN]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].Columns[SSN]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="SSN"
-                      externalMetadataColumnId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstSSN]"
+                      externalMetadataColumnId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstSSN]"
                       lineageId="Package\DFT - Stage Customer File\FF SRC - Customer Flat File.Outputs[Flat File Source Output].Columns[SSN]" />
                     <inputColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].Columns[GUID]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].Columns[GUID]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="GUID"
-                      externalMetadataColumnId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstGuid]"
+                      externalMetadataColumnId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstGuid]"
                       lineageId="Package\DFT - Stage Customer File\FF SRC - Customer Flat File.Outputs[Flat File Source Output].Columns[GUID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstId]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstId]"
                       dataType="i4"
                       name="stgCstId" />
                     <externalMetadataColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstFirstName]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstFirstName]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="stgCstFirstName" />
                     <externalMetadataColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstLastName]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstLastName]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="stgCstLastName" />
                     <externalMetadataColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstEmail]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstEmail]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="stgCstEmail" />
                     <externalMetadataColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstGender]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstGender]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="stgCstGender" />
                     <externalMetadataColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstSSN]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstSSN]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="stgCstSSN" />
                     <externalMetadataColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstGuid]"
-                      dataType="bytes"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input].ExternalColumns[stgCstGuid]"
+                      codePage="1252"
+                      dataType="str"
                       length="50"
                       name="stgCstGuid" />
                   </externalMetadataColumns>
@@ -459,22 +460,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -486,7 +487,7 @@
           <paths>
             <path
               refId="Package\DFT - Stage Customer File.Paths[Flat File Source Output]"
-              endId="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer.Inputs[OLE DB Destination Input]"
+              endId="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
               startId="Package\DFT - Stage Customer File\FF SRC - Customer Flat File.Outputs[Flat File Source Output]" />
           </paths>
@@ -494,13 +495,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\SQL - spTruncateStgCustomer"
+      DTS:refId="Package\SQL - spTruncateStgTblCustomer"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{36D7976F-6AA4-48F4-91F3-C6C44AC34FBD}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="SQL - spTruncateStgCustomer"
+      DTS:ObjectName="SQL - spTruncateStgTblCustomer"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -516,7 +517,7 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{D7D21622-9365-4AD7-943C-61019F56AB83}"
-      DTS:From="Package\SQL - spTruncateStgCustomer"
+      DTS:From="Package\SQL - spTruncateStgTblCustomer"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\DFT - Stage Customer File" />
@@ -536,25 +537,25 @@
         <NodeLayout
           Size="210,42"
           Id="Package\DFT - Stage Customer File"
-          TopLeft="493,269" />
+          TopLeft="15.5,107.5" />
         <NodeLayout
-          Size="230,42"
-          Id="Package\SQL - spTruncateStgCustomer"
-          TopLeft="485,172" />
+          Size="245,42"
+          Id="Package\SQL - spTruncateStgTblCustomer"
+          TopLeft="4.5,6.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="599,214">
+          TopLeft="123.75,48.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,55"
+              EndConnector="0,59"
               Start="0,0"
-              End="0,47.5">
+              End="0,51.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.5" />
+                    End="0,51.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -572,27 +573,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="236,42"
+          Id="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer"
+          TopLeft="5.50000000000001,107.5" />
+        <NodeLayout
           Size="218,42"
           Id="Package\DFT - Stage Customer File\FF SRC - Customer Flat File"
-          TopLeft="513,174" />
-        <NodeLayout
-          Size="220,42"
-          Id="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer"
-          TopLeft="514,319" />
+          TopLeft="14.5,5.5" />
         <EdgeLayout
           Id="Package\DFT - Stage Customer File.Paths[Flat File Source Output]"
-          TopLeft="623,216">
+          TopLeft="123.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,103"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,95.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,95.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -605,7 +606,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT - Stage Customer File\OLEDB DEST - stgCustomer">
+    design-time-name="Package\DFT - Stage Customer File\OLEDB DEST - stgTblCustomer">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
